@@ -1,25 +1,23 @@
 <html>
-
-<head>
-    <title>
-        My first website.
-    </title>
+    <head>
+        <title>
+            My second website.
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
 </head>
 
-<body style="background-color: beige; font-style: italic;">
-    <h1>
-        This is the main heading!
-    </h1>
+<body style="background-color: rgb(222, 241, 241);">
 
-    <h2>
-        This is the subheading
-    </h2>
+<img id="koala" src="img/koala.webp" width="200" onmouseover="this.src='img/koala2.jpeg';" onmouseout="this.src='img/koala.webp';"/>
 
-    <p>
-        This is paragraph
-    </p>
+<script>
+    var sound1 = new buzz.sound("sound/Scape 2.wav");
 
-    <img src="img/koala.webp" width="350">
+    window.onload = function() {
+        document.getElementById('koala').addEventListener('mouseover', function () {sound1.play(); });
+    };
+</script>
+
 
 </body>
 
